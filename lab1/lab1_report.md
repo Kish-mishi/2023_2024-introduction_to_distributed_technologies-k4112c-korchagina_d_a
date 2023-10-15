@@ -22,7 +22,7 @@ Date of finished:
 ```
 minikube start
 ```
-![start_minikube](/lab1/minikube start.png)
+![start_minikube](/lab1/minikubestart.png)
 
 ### 3. Создание манифеста
 Создан файл `vault-pod.yaml`, который описывает конфигурацю "пода". На скриншоте представлена конфигурация "пода".
