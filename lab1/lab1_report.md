@@ -7,6 +7,7 @@ Author: Korchagina Daria
 Lab: Lab1  
 Date of create: 15.10.2023  
 Date of finished: 
+
 ---
 # Установка Docker и Minikube, мой первый манифест
 ## Цель работы
