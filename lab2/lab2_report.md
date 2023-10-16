@@ -64,3 +64,4 @@ nano deployment.yaml
 
 ## Схема организации контейнеров и сервисов
 
+![Scheme](/lab2/Scheme.png)
