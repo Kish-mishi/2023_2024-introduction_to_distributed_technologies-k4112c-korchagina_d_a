@@ -13,7 +13,7 @@ Date of finished:
 Ознакомиться с инструментами Minikube и Docker, развернуть свой первый "под".
 ## Ход работы
 ### 1. Установка Docker
-Установлен Docker Desktop и WLS.
+Установлены Docker Desktop и WLS.
 
 ![docker](/lab1/Docker.png)
 
@@ -79,4 +79,4 @@ kubectl logs vault
 
 ## Схема организации контейнеров и сервисов
 
-![scheme](/lab1/Scheme1.png)
+![scheme](/lab1/Scheme2.png)
