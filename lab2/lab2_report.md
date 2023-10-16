@@ -57,7 +57,9 @@ nano deployment.yaml
  minikube kubectl -- get all
 ```
 ![get all](/lab2/GA.png)
+
 Зная названия контейнеров, мы можем посмотреть логи каждого из них:
+
 ![Logs](/lab2/Logs.png)
 
 ## Схема организации контейнеров и сервисов
