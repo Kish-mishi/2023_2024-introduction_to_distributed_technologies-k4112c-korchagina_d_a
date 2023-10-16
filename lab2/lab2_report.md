@@ -32,6 +32,7 @@ nano deployment.yaml
 ![service](/lab2/Service.png)
 
 Запускаем:
+
 ![apply](/lab2/Apply.png)
 
 ### 3. Запуск в `minikube` режима проброса портов и подключение к контейнерам через веб браузер.
