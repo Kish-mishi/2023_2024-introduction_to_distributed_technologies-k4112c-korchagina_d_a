@@ -77,6 +77,6 @@ kubectl logs vault
 kubectl logs vault
 ```
 
-## Схема организации контейеров и сервисов
+## Схема организации контейнеров и сервисов
 
 ![scheme](/lab1/Scheme1.png)
