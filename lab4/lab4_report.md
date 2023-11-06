@@ -125,4 +125,4 @@ kubectl exec -ti ddeployment-68c469d755-jrc26 -- sh
 ![](/lab4/pictures/ping2.png)
 
 ### Схема
-
+![](/lab4/pictures/scheme.png)
