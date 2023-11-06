@@ -18,13 +18,13 @@ Date of finished:
 ```
 minikube start --network-plugin=cni --cni=calico --nodes 2 -p multinode-demo
 ```
-![](/lab4/pictures/minikube start.png)
+![](/lab4/pictures/minikube_start.png)
 
 Проверка количества нод:
 ```
 kubectl get nodes
 ```
-![](/lab4/pictures/get nodes.png)
+![](/lab4/pictures/get_nodes.png)
 
 Проверка количества подов calico(их должно быть столько же, сколько нод):
 ```
@@ -60,7 +60,7 @@ kubectl delete ippools default-ipv4-ippool
 ```
 kubectl exec -i -n kube-system calicoctl -- /calicoctl --allow-version-mismatch create -f - < ippool.yaml
 ```
-![](/lab4/pictures/create ippool.png)
+![](/lab4/pictures/create_ippool.png)
 
 Проверяем:
 
@@ -74,7 +74,7 @@ kubectl exec -i -n kube-system calicoctl -- /calicoctl --allow-version-mismatch 
 ```
 kubectl apply -f deployment.yaml -f service.yaml
 ```
-![](/lab4/pictures/apply deploy.png)
+![](/lab4/pictures/apply_deploy.png)
 
 Проверка:
 
@@ -85,14 +85,14 @@ kubectl get deployments
 ```
 kubectl get services
 ```
-![](/lab4/pictures/get services.png)
+![](/lab4/pictures/get_services.png)
 
 Смотрим IP подов:
 
 ```
 `kubectl get pods -o wide`
 ```
-![](/lab4/pictures/check ip.png)
+![](/lab4/pictures/check_ip.png)
 
 ### Прокидывание порта
 
@@ -115,7 +115,7 @@ kubectl exec -ti deployment-68c469d755-hxwl2 -- sh
 
 ![](/lab4/pictures/ping.png)
 
-Наоборот, Заходим в контейнер `deployment-68c469d755-jrc26`:
+Наоборот, заходим в контейнер `deployment-68c469d755-jrc26`:
 
 ```
 kubectl exec -ti ddeployment-68c469d755-jrc26 -- sh
