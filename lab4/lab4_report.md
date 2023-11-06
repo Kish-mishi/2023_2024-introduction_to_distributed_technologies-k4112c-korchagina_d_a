@@ -90,7 +90,7 @@ kubectl get services
 Смотрим IP подов:
 
 ```
-`kubectl get pods -o wide`
+kubectl get pods -o wide
 ```
 ![](/lab4/pictures/check_ip.png)
 
