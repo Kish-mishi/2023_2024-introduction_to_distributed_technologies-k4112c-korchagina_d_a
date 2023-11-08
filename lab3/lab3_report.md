@@ -4,7 +4,7 @@ Course: [Introduction to distributed technologies](https://github.com/itmo-ict-f
 Year: 2023/2024  
 Group: K4112c  
 Author: Korchagina Daria 
-Lab: Lab1  
+Lab: Lab3 
 Date of create: 06.11.2023  
 Date of finished: 
 -------
