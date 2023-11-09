@@ -184,6 +184,7 @@ minikube ip
 sudo nano /etc/hosts
 ```
 ![](/lab3/pictures/fqdn.png)
+
 Перенаправляем трафик: 
 
 ```
@@ -192,7 +193,7 @@ minikube tunnel
 
 ![](/lab3/pictures/tunnel.png)
 
-Переходим в сервис по доменному имени [https://lab3.info](https://lab3.info)
+Переходим по доменному имени [https://lab3.info](https://lab3.info)
 
 ![](/lab3/pictures/sert.png)
 
