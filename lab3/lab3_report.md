@@ -17,6 +17,10 @@ Date of finished:
 
 ### 1. Создание манифеста
 
+Запускаем миникуб:
+
+![](/lab3/pictures/minikube-start.png)
+
 Создаем манифест командой:
 
 ```
@@ -78,16 +82,41 @@ spec:
 ```
 kubectl apply -f lab3.yaml
 ```
+
 ### 2. Создание сертификата
 
 ```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=lab3-app.info"
 ```
+![](/lab3/pictures/create-sert.png)
+
 ### 3. Создание секрета
 
 ```
 kubectl create secret tls tls-secret --cert=tls.crt --key=tls.key
 ```
+![](/lab3/pictures/secret.png)
+
+Проверяем то, что создали командами:
+
+```
+kubectl get configmap
+```
+```
+kubectl get deployment
+```
+```
+kubectl get service
+```
+```
+kubectl get pod
+```
+```
+kubectl get secret
+```
+![](/lab3/pictures/kubectl-ge.png)
+
+
 ### 4. Создание ingress
 
 Подключение ingress:
@@ -95,6 +124,8 @@ kubectl create secret tls tls-secret --cert=tls.crt --key=tls.key
 ```
 minikube addons enable ingress
 ```
+![](/lab3/pictures/enable-ingress.png)
+
 Создание ingress:
 
 ```
@@ -124,6 +155,20 @@ spec:
     secretName: tls-secret
 
 ```
+Применяем:
+
+```
+kubectl apply -f lab3_Ingress.yaml
+```
+
+![](/lab3/pictures/apply-ingr.png)
+
+Проверка:
+```
+kubectl get ingress
+```
+![](/lab3/pictures/get-ingr.png)
+
 ### 5. Доступ к приложению
 
 Узнаем IP: 
@@ -131,16 +176,24 @@ spec:
 ```
 minikube ip
 ```
+![](/lab3/pictures/ip.png)
+
 Вписываем его и доменное имя в hosts:
 
 ```
 sudo nano /etc/hosts
 ```
+![](/lab3/pictures/fqdn.png)
 Перенаправляем трафик: 
 
 ```
 minikube tunnel
 ```
+
+![](/lab3/pictures/tunnel.png)
+
 Переходим в сервис по доменному имени [https://lab3.info](https://lab3.info)
+
+![](/lab3/pictures/sert.png)
 
 
