@@ -81,7 +81,7 @@ kubectl apply -f lab3.yaml
 ### 2. Создание сертификата
 
 ```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=lab3.info"
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=lab3-app.info"
 ```
 ### 3. Создание секрета
 
@@ -108,7 +108,7 @@ metadata:
   name: ingress-lab3
 spec:
   rules:
-  - host: lab3.info
+  - host: lab3-app.info
     http:
       paths:
       - path: /
@@ -120,8 +120,9 @@ spec:
               number: 80
   tls:
   - hosts:
-    - lab3.info
+    - lab3-app.info
     secretName: tls-secret
+
 ```
 ### 5. Доступ к приложению
 
