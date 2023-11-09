@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-lab3
+data:
+  REACT_APP_USERNAME: "Darisha"
+  REACT_APP_COMPANY_NAME: "ITMO"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-lab3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-lab3
+  template:
+    metadata:
+      labels:
+        app: app-lab3
+    spec:
+      containers:
+      - name: app-lab3
+        image: ifilyaninitmo/itdt-contained-frontend:master
+        envFrom:
+          - configMapRef:
+              name: config-lab3
+        ports:
+          - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-lab3
+spec:
+  selector:
+    app: app-lab3
+  ports:
+    - port: 80
+      protocol: TCP
+      name: http
+  type: NodePort

@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-lab3
+spec:
+  rules:
+  - host: lab3-app.info
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: service-lab3
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - lab3-app.info
+    secretName: tls-secret
