@@ -197,4 +197,8 @@ minikube tunnel
 
 ![](/lab3/pictures/sert.png)
 
+### 6. Схема
+
+![](/lab3/pictures/scheme3.png)
+
 
